@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//FIREBASE
+import { environment } from './environments/environment.prod';
+
 @NgModule({
   declarations: [
     AppComponent
