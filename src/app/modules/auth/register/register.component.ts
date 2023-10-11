@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Usuario } from 'src/app/models/usuario';
 import { FirestoreService } from 'src/app/shared/services/firestore.service';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +18,7 @@ export class RegisterComponent {
     public serviceFirestore:FirestoreService,
     public router:Router
     ) { }
-  //importacion del modelo  
+  //importacion del modelo
   usuarios:Usuario = {
     uid: '',
     nombre:'',
@@ -39,7 +39,7 @@ export class RegisterComponent {
     //metodo then devuelve misma promesa
     .then(res =>{
       alert("Ha agregado un nuevo usuario con exito :)");
-      
+
       this.router.navigate(["/inicio"]);
     })
     //metodo catch creara un error en caso de que algo salga mal
@@ -49,11 +49,11 @@ export class RegisterComponent {
       const uid = await this.servicioAuth.getUid();
       this.usuarios.uid = uid;
       this.guardarUser();
-   
+
   }
   //funcion asincronica para guardar usuarios
   async guardarUser(){
-    this.serviceFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+    await this.serviceFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
     .then(res =>{
       console.log(this.usuarios);
     })
