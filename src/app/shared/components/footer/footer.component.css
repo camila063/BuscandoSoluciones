@@ -1,0 +1,19 @@
+footer{
+    width:  1920px;
+    height: 450px;
+    flex-shrink: 0;
+    background: #81A4CD;
+    
+}
+
+span{
+    color: #000;
+text-align: center;
+font-family: Fenix;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+

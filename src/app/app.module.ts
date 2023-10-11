@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 //FIREBASE
 import { environment } from './environments/environment.prod';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { environment } from './environments/environment.prod';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
