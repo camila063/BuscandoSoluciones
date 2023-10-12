@@ -5,6 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//FIREBASE
+import { environmnent } from 'src/environments/environments.prod';
+import { SharedModule } from './shared/shared.module';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [zz
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
